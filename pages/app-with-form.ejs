@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявки с формы</title>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: white;
+        color: black;
+        font-family: "Roboto", sans-serif;
+      }
+
+      table {
+        width: 650px;
+        border-top: 7px solid rgb(5, 15, 1);
+        border-collapse: collapse;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 1px solid #dddddd;
+      }
+
+      td {
+        text-align: left;
+        padding: 10px;
+        border: 3px solid rgb(5, 15, 1);
+      }
+      th {
+        text-align: center;
+        padding: 10px;
+        border: 3px solid rgb(5, 15, 1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Заявки с формы</h1>
+      <form action="/app-with-form" method="POST">
+        <input type="text" name="search" id="search" />
+        <label class="form-label" for="search">Поиск по ФИО</label>
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>Дата отправки</th>
+          <th>ФИО</th>
+          <th>Телефон</th>
+          <th>Проблема</th>
+        </tr>
+        <% for (let i = 0; i < records.length; i++) { %>
+        <tr>
+          <td><%= records[i].date %></td>
+          <td><%= records[i].fio %></td>
+          <td><%= records[i].phone %></td>
+          <td><%= records[i].yourProblem %></td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>

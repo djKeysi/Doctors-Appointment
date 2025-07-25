@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Поля ввода полной ширины */
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для всех кнопок */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding-left: 50px;
+  margin-left: 60px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Добавить отступы к элементам контейнера */
+.container {
+  padding: 60px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Очистить поплавки */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
